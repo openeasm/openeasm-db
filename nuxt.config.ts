@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'Ecommerce demo - Meilisearch',
+      title: 'OpenEASM BANNER DB - Meilisearch',
       meta: [
         { name: 'description', content: 'Ecommerce demo featuring fast and relevant onsite search powered by Meilisearch.' },
         { name: 'google-site-verification', content: process.env.GOOGLE_SITE_VERIFICATION_ID }
@@ -39,8 +39,15 @@ export default defineNuxtConfig({
     '~/assets/css/typography.css',
     '~/assets/css/spacing.css',
     '~/assets/css/shadow.css',
-    '~/assets/css/utilities.css'
+    '~/assets/css/utilities.css',
+    '~/assets/css/main.css'
   ],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
   modules: [
     // Handle interface imports for defineProps
     // Docs: https://github.com/wheatjs/vite-plugin-vue-type-imports

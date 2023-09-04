@@ -19,6 +19,9 @@ import { AisInfiniteHits } from 'vue-instantsearch/vue3/es'
           :port="product.port"
           :country="product.country"
           :banner="product.banner"
+          :asn="product.asn"
+          :org="product.org"
+          :insert_time="product.insert_time"
           :service = "product.service"
         />
       </div>
