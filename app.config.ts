@@ -1,5 +1,5 @@
 export default defineAppConfig({
   ecommerce: {
-    indexName: 'amazon-products'
+    indexName: 'openeasm_banner'
   }
 })

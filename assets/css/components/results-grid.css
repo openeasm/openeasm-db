@@ -1,6 +1,7 @@
 .items {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: 100%;
+  width: 100%;
   column-gap: calc(1.5 * var(--size-5));
   row-gap: calc(1.5 * var(--size-5));
 }

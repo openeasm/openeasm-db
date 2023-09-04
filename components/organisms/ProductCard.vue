@@ -2,50 +2,44 @@
 // import { TwicImg } from '@twicpics/components/vue3'
 
 const props = defineProps<{
-  name: string
-  brand: string
-  price: number | null // some prices are null in our dataset
-  rating: number
-  reviewsCount: number
-  imageUrl: string
+  ip: string
+  port: string
+  country: string
+  banner: string
+  service: string
 }>()
 
-const { name, brand, price, rating, reviewsCount, imageUrl } = toRefs(props)
+const {ip, port, country, service} = toRefs(props)
 
-const formattedPrice = computed(() => Number.isNaN(price) ? '-' : price)
+// const formattedPrice = computed(() => Number.isNaN(price) ? '-' : price)
 
-const optimizedImageUrl = computed(() => imageUrl.value.replace('https://images-na.ssl-images-amazon.com/images/', '/product-images/'))
+// const optimizedImageUrl = computed(() => imageUrl.value.replace('https://images-na.ssl-images-amazon.com/images/', '/product-images/'))
 </script>
 
 <template>
   <BaseCard class="product-card">
-    <TwicImg
-      :alt="name"
-      :src="optimizedImageUrl"
-      class="mb-5"
-    />
     <div class="px-5 pb-5">
-      <BaseTitle size="xs" class="mb-1 text-hot-pink-500 -900">
-        {{ brand }}
+      <BaseTitle class="mb-1 text-hot-pink-500 -900 title-xl" style="margin-top: 8px;font-size: larger !important;">
+        {{ service }}://{{ ip }}:{{ port }}
       </BaseTitle>
-      <BaseText
-        size="m"
-        class="mb-2 text-valhalla-500 product-name"
-        :title="name"
-      >
-        {{ name }}
-      </BaseText>
-      <BaseText size="l" class="mb-2">
-        <span class="text-ashes-900">$</span> <span class="text-valhalla-100">{{ formattedPrice }}</span>
-      </BaseText>
-      <div class="product-rating">
-        <BaseText size="s" class="mr-1 text-valhalla-100">
-          {{ rating }}
-        </BaseText>
-        <StarRating :rating="rating" class="my-auto mr-2 text-valhalla-100" />
-        <BaseText size="xs" class="text-ashes-900">
-          {{ reviewsCount }} reviews
-        </BaseText>
+      <div class="grid grid-cols-4 gap-4">
+        <div>
+          <BaseText
+              class="mb-2 text-valhalla-900 "
+              size="m"
+          >
+            {{ country }}
+          </BaseText>
+        </div>
+        <div>
+          <BaseText
+              class="mb-2 text-valhalla-900 "
+              size="m"
+          >
+            {{ country }}
+          </BaseText>
+        </div>
+
       </div>
     </div>
   </BaseCard>
@@ -53,7 +47,7 @@ const optimizedImageUrl = computed(() => imageUrl.value.replace('https://images-
 
 <style scoped>
 .product-card {
-  max-width: 250px;
+  max-width: 100%;
   transition: transform ease-in-out 150ms;
 }
 

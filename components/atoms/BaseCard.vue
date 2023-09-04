@@ -1,5 +1,5 @@
 <template>
-  <div class="card shadow-m">
+  <div class="card shadow-l">
     <slot name="default" />
   </div>
 </template>

@@ -11,16 +11,15 @@ import { AisInfiniteHits } from 'vue-instantsearch/vue3/es'
         isLastPage,
       }"
     >
-      <div class="items mb-10">
+      <div class="items mb-1">
         <ProductCard
           v-for="product in items"
-          :key="product.uniq_id"
-          :name="product.name"
-          :brand="product.brand"
-          :price="product.price"
-          :image-url="product.image_url.split('|')[0]"
-          :rating="product.rating"
-          :reviews-count="product.reviews_count"
+          :key="product.id"
+          :ip="product.ip"
+          :port="product.port"
+          :country="product.country"
+          :banner="product.banner"
+          :service = "product.service"
         />
       </div>
       <div v-if="!isLastPage">
