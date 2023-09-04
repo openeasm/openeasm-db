@@ -1,10 +1,7 @@
-<p align="center">
-  <a href="https://www.meilisearch.com/?utm_campaign=ecommerce-demo&utm_source=github&utm_medium=readme" target="_blank">
-    <img src="https://github.com/meilisearch/meilisearch/blob/main/assets/logo.svg" alt="Meilisearch" width="200" height="200" />
-  </a>
-</p>
 
-<h1 align="center">Meilisearch Nuxt 3 ecommerce demo</h1>
+
+<h1 align="center">OpenEASM K.M. demo</h1>
+![image](https://github.com/openeasm/openeasm-db/assets/15059493/c78a4a7f-78c8-4ff8-a39d-0bf127c49df2)
 
 <h4 align="center">
   <a href="https://www.meilisearch.com/?utm_campaign=ecommerce-demo&utm_source=github&utm_medium=readme">Website</a> |
