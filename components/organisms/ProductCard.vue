@@ -6,13 +6,14 @@ const props = defineProps<{
   port: string
   country: string
   asn: string
+  city: string
   banner: string
   org: string
   service: string
   insert_time: string
 }>()
 
-var {ip, port, country, service, asn, org, insert_time} = toRefs(props)
+var {ip, port, country, service, asn, org, insert_time,city} = toRefs(props)
 if (service !=undefined && service.value!=undefined && service.value.length > 0) {
   service.value = service.value.toLowerCase()
 }
@@ -46,10 +47,18 @@ function toggleCollapse() {
           <div class="flex flex-col mr-1.5 pr-3">
             <div class="flex justify-between pl-3 pt-1">
               <div class="w-1/4 pr-2">
+                Service:
+              </div>
+              <div class="w-3/4 pl-2">
+                {{ service }}
+              </div>
+            </div>
+            <div class="flex justify-between pl-3 pt-1">
+              <div class="w-1/4 pr-2">
                 Location:
               </div>
               <div class="w-3/4 pl-2">
-                {{ country }}
+                {{ country }} / {{ city }}
               </div>
             </div>
             <div class="flex justify-between bg-gray-200 pl-3 pt-1">

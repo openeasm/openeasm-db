@@ -23,8 +23,8 @@ const sortingOptions = [
         <MeiliSearchFacetFilter attribute="service" initial-sort-by="count" class="mb-5" />
         <MeiliSearchFacetFilter attribute="port" initial-sort-by="count" label="mb-5" />
         <MeiliSearchFacetFilter attribute="country" initial-sort-by="count" label="mb-5" />
-<!--        <MeiliSearchFacetFilter attribute="city" initial-sort-by="count" label="mb-5" />-->
         <MeiliSearchFacetFilter attribute="org" initial-sort-by="count" label="mb-5" />
+        <MeiliSearchFacetFilter attribute="asn" initial-sort-by="count" label="mb-5" />
       </div>
       <div class="results">
         <div class="mb-5 results-meta">

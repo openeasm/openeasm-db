@@ -20,6 +20,7 @@ import { AisInfiniteHits } from 'vue-instantsearch/vue3/es'
           :country="product.country"
           :banner="product.banner"
           :asn="product.asn"
+          :city="product.city"
           :org="product.org"
           :insert_time="product.insert_time"
           :service = "product.service"
